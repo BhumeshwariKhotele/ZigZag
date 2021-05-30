@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6162876529101559186, guid: bd07e180875a90b42be9a80cf0ca5153, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162876530045819344, guid: bd07e180875a90b42be9a80cf0ca5153, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162876530045819351, guid: bd07e180875a90b42be9a80cf0ca5153, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.58
+      objectReference: {fileID: 0}
     - target: {fileID: 6162876531021125074, guid: bd07e180875a90b42be9a80cf0ca5153, type: 3}
       propertyPath: m_Name
       value: ForwardTile
@@ -518,10 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cec2c90ec6f8954e8f4e6142751ed20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  tiles: []
   currentTile: {fileID: 406769845}
 --- !u!4 &1941009497
 Transform:
