@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     Vector3 direction;// 
     public float playerSpeed;
-
+    public GameObject ParticleEffectPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.tag=="PickUp")
         {
             other.gameObject.SetActive(false);
+            Instantiate(ParticleEffectPrefab,transform.position,Quaternion.identity);
         }
     }
 }

@@ -19,10 +19,12 @@ public class Tiles : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
 
             TileManager.Instance.SpawnTile();
+
+            Debug.Log("Coroutine started");
             StartCoroutine("FallDown");
 
             //Debug.Log("Triggered");
@@ -32,21 +34,24 @@ public class Tiles : MonoBehaviour
     }
     IEnumerator FallDown()
     {
+        Debug.Log("In falldown fun");
         yield return new WaitForSeconds(3);
+        Debug.Log("after 3 wait");
         tempRigidbody.isKinematic = false;
         yield return new WaitForSeconds(1);
+        Debug.Log("after 1 wait");
         tempRigidbody.isKinematic = true;
         if (tempRigidbody.gameObject.name == "ForwardTile")
         {
 
             TileManager.Instance.AddForwardTilePool(tempRigidbody.gameObject);
-            //Debug.Log("Added to forward pool");
+            Debug.Log("Added to forward pool");
         }
         else if (tempRigidbody.gameObject.name == "LeftTile")
         {
 
             TileManager.Instance.AddLeftTilePool(tempRigidbody.gameObject);
-            //Debug.Log("Added to left pool");
+            Debug.Log("Added to left pool");
         }
     }
 }
