@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public GameObject EndScreen;
+
+
     [SerializeField]
     Vector3 direction;// 
     public float playerSpeed;
@@ -35,7 +39,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         transform.Translate(direction * playerSpeed * Time.deltaTime);
-
+        
+        if(this.transform.position.y < 0)
+        {
+            EndScreen.SetActive(true);
+            Destroy(this.gameObject);
+        }
         
         
     }
