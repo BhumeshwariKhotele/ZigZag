@@ -17,6 +17,8 @@ public class Tiles : MonoBehaviour
     {
         // Debug.Log(tempRigidbody.gameObject.name);
     }
+
+  
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

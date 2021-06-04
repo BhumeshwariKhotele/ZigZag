@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
             EndScreen.SetActive(true);
             scoreText.text = "";
             finalScore.text = "Score :" + score;
-           
         }
         
         
@@ -56,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.tag=="PickUp")
         {
             score = score + 5;
-            //Debug.Log("Score: "+score);
             
             scoreText.text = "Score : " + score;
             other.gameObject.SetActive(false);
