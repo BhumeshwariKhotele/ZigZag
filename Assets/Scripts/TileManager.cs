@@ -52,7 +52,7 @@ public class TileManager : MonoBehaviour
             leftTilePool.Peek().name = "LeftTile";
         }
 
-    }
+    }   
     public void AddForwardTilePool(GameObject tempObj)
     {
         forwardTilePool.Push(tempObj);
